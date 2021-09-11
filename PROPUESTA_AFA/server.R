@@ -380,10 +380,10 @@ output$GRAF_EFA_4 <- renderPlot({
                           ambitoEntidadMatricula,
                           NombreFinalGrupo)) %>%
         
-        subset(periodo %in% input$PERIODO_2 &
-               ambitoEntidadMatricula %in% input$AMBITO_2 &
-               NombreFinalGrupo %in% input$NOMBRE_2
-               ) %>%
+        # subset(periodo %in% input$PERIODO_2 &
+        #        ambitoEntidadMatricula %in% input$AMBITO_2 &
+        #        NombreFinalGrupo %in% input$NOMBRE_2
+        #        ) %>%
         
         group_by(dptoEntidadMatricula) %>%
         summarise(Cantidad = n()) %>% 
